@@ -41,12 +41,12 @@ def atbash(message):
     restart()
 
 # Encrypting function for caesar
-def caesar_encrypt(message): # Define func
+def caesar_encrypt(message): # Define func, uses math to encrypt + decrypt
     # Make list
     final_message = [] # Make empty list so doesnt get mixed
     for letter in message: # Loop through each letter
         if letter.isalpha(): # Checks if each letter is a letter no number
-            shifted_letter = chr(ord(letter) + 3)  # CONVERT letter to number by adding 3 (how cipher works)
+            shifted_letter = chr(ord(letter) + 3)  # CONVERT letter to number by adding 3 (how cipher works), ord turns letter into # and chr does opposite
             final_message.append(shifted_letter) # add newly shifted letter in list
         else: # if not letter 
             final_message.append(letter) # add unchanged letter 
