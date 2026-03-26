@@ -5,7 +5,7 @@ cipher_atbash = {"a":"z", "b":"y", "c":"x", "d":"w", "e":"v", "f":"u", "g":"t", 
 def choice():
     while True: # Loops forever until a valid answer
         choice = input("What cipher do you want to use? [A]tbash or [C]aesar?\n").strip().title()
-        message = input("Enter a message you want to encrypt (please enter only letters, no special characters or numbers):\n").strip().lower() # strip remove extra space, title make every first letter cap
+        message = input("Enter a message you want to encrypt (please enter only letters, no special characters or numbers if in ceaser numbers will remain same!):\n").strip().lower() # strip remove extra space, title make every first letter cap
         if choice == "A" and message.isalpha(): # alpha checks if text only has letters
             atbash(message) # Call atbash function
             break # Exits loop
