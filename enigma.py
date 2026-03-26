@@ -1,7 +1,7 @@
 # Create a dictionary that maps each letter to its reverse
 cipher_atbash = {"a":"z", "b":"y", "c":"x", "d":"w", "e":"v", "f":"u", "g":"t", "h":"s", "i":"r", "j":"q", "k":"p", "l":"o", "m":"n", "n":"m", "o":"l", "p":"k", "q":"j", "r":"i", "s":"h", "t":"g", "u":"f", "v":"e", "w":"d", "x":"c", "y":"b", "z":"a",}
 
-# Ask user what cipher they want to use
+# Ask user what cipher they want to use, either atbash or ceaser
 def choice():
     while True: # Loops forever until a valid answer
         choice = input("What cipher do you want to use? [A]tbash or [C]aesar?\n").strip().title()
@@ -10,7 +10,7 @@ def choice():
             atbash(message) # Call atbash function
             break # Exits loop
         elif choice == "A" and not message.isalpha(): # If atbash chosen but message no letter
-            print("Something went wrong")
+            print("Something went wrong, restart occuring.. (Maybe read next time)")
             continue # Restarts the loop
         elif choice== "C":
             while True:
@@ -41,7 +41,7 @@ def atbash(message):
     restart()
 
 # Encrypting function for caesar
-def caesar_encrypt(message): # Define func, uses math to encrypt + decrypt 
+def caesar_encrypt(message): # Define func, uses math to encrypt + decrypt
     # Make list
     final_message = [] # Make empty list so doesnt get mixed
     for letter in message: # Loop through each letter
