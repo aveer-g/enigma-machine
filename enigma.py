@@ -41,7 +41,7 @@ def atbash(message):
     restart()
 
 # Encrypting function for caesar
-def caesar_encrypt(message): # Define func, uses math to encrypt + decrypt
+def caesar_encrypt(message): # Define func, uses math to encrypt + decrypt 
     # Make list
     final_message = [] # Make empty list so doesnt get mixed
     for letter in message: # Loop through each letter
